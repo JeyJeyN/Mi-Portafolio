@@ -3,10 +3,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
 
 html {
-    background:url("img/Fondo\ azul\ 1.jpg");
+    background:url("img/Fondo\ azul\ 1.4.jpg");
     scroll-behavior: smooth;
     font-family: 'Raleway', sans-serif;
     color: #ffffff;
+    display: inline-flex;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-size:cover;
 
 }
 
@@ -17,7 +22,7 @@ html {
     position: fixed;
     top: 0;
     background-color: #0a0479;
-    width: 100%
+    width: 100%;
 }
 
 .container-header {
@@ -156,7 +161,7 @@ p.subtitulo1 i{
 .container-sobre-mi {
 
     padding: 4rem 0;
-    background: radial-gradient(#EAF2FD 40%, #eaf2fd5a,  #eaf2fd00 );
+    color:#EAF2FD;
 }
 
 .subtitulo {
@@ -174,14 +179,6 @@ p.subtitulo1 i{
     color: #f9f9f9;
 }
 
-.subtitulo2a {
-
-    font-weight: 700;
-    font-size: 1.7rem;
-    margin-bottom: 1rem;
-    color: #070091;
-}
-
 .subtitulo i {
 
 
@@ -191,15 +188,22 @@ p.subtitulo1 i{
 .biografia {
 
     line-height: 1.17375rem;
-    color: #070091;
+    color: #ffffff;
 }
 
-.conjunto-skills, .conjunto-hobbies {
-
+.conjunto-hobbies {
     display: flex;
     gap: 1rem;
 
 }
+
+.conjunto-skills{
+    display: flex;
+    flex-wrap:nowrap;
+    gap: 1rem;
+
+}
+
 
 .container-skills .subtitulo, .container-hobbies .subtitulo, .container-formacion .subtitulo, .container-proyectos .subtitulo {
 
@@ -211,7 +215,7 @@ p.subtitulo1 i{
 
 .cuadrado {
 
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     flex-basis: 50%;
     padding: 2rem 0 0.5rem;
     font-size: 4rem;
@@ -219,6 +223,8 @@ p.subtitulo1 i{
     text-align: center;
     border-radius: 1rem;
     gap: 5rem;
+    box-shadow: 2px 2px 40px;;
+    box-shadow: #000000;
 
 
 }
@@ -245,7 +251,7 @@ p.subtitulo1 i{
 .container-formacion {
 
 
-    background: radial-gradient(#EAF2FD 15%, #eaf2fd5a,  #eaf2fd00 );
+    background: radial-gradient(#EAF2FD 50%, #086af25a ,  #eaf2fd00 );
     padding: 2rem 0;
     margin-top: 5rem;
 
@@ -267,7 +273,9 @@ p.subtitulo1 i{
 .cuadrado-texto {
 
     flex-basis: 50%;
+    
 }
+
 
 .imagen-proyecto {
 
@@ -299,6 +307,15 @@ p.subtitulo1 i{
     flex-basis: 100%;
 
 }
+
+.subtitulo2a {
+
+    font-weight: 700;
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
 
 .descripcion-subtitulo2 {
 
@@ -371,7 +388,7 @@ p.subtitulo1 i{
 .fondo-formulario-contacto {
 
     padding: 7rem 0 4rem 0;
-    background: radial-gradient(#EAF2FD 10%, #eaf2fd5a,  #eaf2fd00 );
+ 
 
 }
 
@@ -615,3 +632,14 @@ p.subtitulo1 i{
 
 
 }
+
+@media (max-width: 646px){
+
+   .conjunto-skills{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+
+
+}   
+
